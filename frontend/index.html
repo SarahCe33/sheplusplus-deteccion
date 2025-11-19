@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Detector de Rostros</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      text-align: center;
+    }
+
+    img {
+      margin-top: 20px;
+      max-width: 600px;
+      border: 2px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #0088ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #006fd6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔍 Detector de Rostros con Python + OpenCV</h1>
+
+  <input type="file" id="file">
+  <br><br>
+  <button onclick="procesar()">Detectar rostros</button>
+
+  <br><br>
+  <img id="resultado">
+
+  <script>
+    async function procesar() {
+      const f = document.getElementById("file").files[0];
+      if (!f) {
+        alert("Por favor selecciona una imagen");
+        return;
+      }
+
+      const form = new FormData();
+      form.append("imagen", f);
+
+      const res = await fetch("http://127.0.0.1:5000/rostros", {
+        method: "POST",
+        body: form
+      });
+
+      const blob = await res.blob();
+      document.getElementById("resultado").src = URL.createObjectURL(blob);
+    }
+  </script>
+
+</body>
+</html>
