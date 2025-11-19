@@ -2,7 +2,7 @@
 
 Este proyecto permite detectar rostros en imágenes usando un backend en Python (Flask + OpenCV) y un frontend simple en HTML + JavaScript.
 El usuario sube una imagen, el backend procesa la detección y devuelve una nueva imagen con los rostros marcados.
-
+_______________________________________________________________________________________________________________________________________________
 🚀 Características
 
 Detecta rostros usando Haar Cascades de OpenCV.
@@ -14,7 +14,7 @@ Compatible con cualquier frontend (HTML, React, Vue, etc.).
 Incluye soporte CORS para evitar errores al conectar frontend ↔ backend.
 
 Respuesta en formato imagen JPEG generada en tiempo real.
-
+_______________________________________________________________________________________________________________________________________________
 📁 Estructura del proyecto
 tallerrostros/
 │
@@ -24,7 +24,7 @@ tallerrostros/
 │
 └── frontend/
     ├── index.html
-
+_______________________________________________________________________________________________________________________________________________
 🛠️ Requisitos
 
 Instala los paquetes necesarios:
@@ -34,11 +34,10 @@ py -m pip install flask-cors
 py -m pip install opencv-python
 py -m pip install numpy
 
-
 Opcional pero recomendado:
 
 py -m pip install --upgrade pip
-
+_______________________________________________________________________________________________________________________________________________
 ▶️ Cómo ejecutar el backend (Flask)
 
 Abre la terminal (CMD).
@@ -60,7 +59,7 @@ Servidor Flask corriendo en http://127.0.0.1:5000
 
 
 El backend ya está funcionando.
-
+_______________________________________________________________________________________________________________________________________________
 🖥️ Cómo usar el frontend
 
 Abre el archivo:
